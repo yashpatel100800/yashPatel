@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: #fafafa;
+    /* Soft dotted pattern for subtle texture */
+    background-image: radial-gradient(#dfc3a3 1px, transparent 1px);
+    background-size: 30px 30px;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+/* Main Container */
+.main-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.biodata-card {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 60px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    border: 1px solid #e8dfd8;
+}
+
+/* Inner golden-color border resembling a wedding card */
+.biodata-card::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 2px solid #dfc3a3;
+    /* Soft Champagne Gold */
+    pointer-events: none;
+    border-radius: 2px;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.card-header::after {
+    content: '❦';
+    /* Wedding floral dingbat */
+    display: block;
+    font-size: 28px;
+    color: #dfc3a3;
+    margin-top: 20px;
+}
+
+.card-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #8b3a3a;
+    /* Deep Maroon / Crimson */
+    margin-bottom: 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.card-header h2 {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #888;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+/* Photos */
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+    /* Ensures photos stay clickable inside the absolute border */
+}
+
+.photos-grid img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 8px solid #f9f6f0;
+    /* Off-white photo frame */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease;
+}
+
+.photos-grid img:hover {
+    transform: scale(1.02);
+}
+
+/* Table */
+.table-container {
+    margin: 40px auto 0;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+}
+
+.biodata-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15.5px;
+}
+
+.biodata-table tr {
+    border-bottom: 1px dashed #dfc3a3;
+    /* Dashed golden line */
+    transition: background-color 0.3s ease;
+}
+
+.biodata-table tr:hover {
+    background-color: #fdfaf7;
+    /* slight hover highlight for readability */
+}
+
+.biodata-table tr:last-child {
+    border-bottom: none;
+}
+
+.biodata-table td {
+    padding: 18px 8px;
+    vertical-align: top;
+}
+
+.label {
+    width: 35%;
+    font-weight: 600;
+    color: #8b3a3a;
+    /* Maroon color for labels */
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+.colon {
+    width: 20px;
+    font-weight: 400;
+    color: #dfc3a3;
+    text-align: center;
+}
+
+.val {
+    width: auto;
+    color: #4a4a4a;
+    /* Dark charcoal grey for easy reading */
+    font-weight: 400;
+}
+
+.link {
+    color: #8b3a3a;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.link:hover {
+    border-bottom: 1px solid #8b3a3a;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .biodata-card {
+        padding: 40px 20px;
+    }
+
+    .biodata-card::before {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .card-header h1 {
+        font-size: 28px;
+    }
+
+    .photos-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .photos-grid img {
+        height: 250px;
+    }
+
+    .biodata-table td {
+        padding: 14px 4px;
+    }
+
+    .label {
+        font-size: 15px;
+    }
+
+    .val {
+        font-size: 14px;
+    }
+}
