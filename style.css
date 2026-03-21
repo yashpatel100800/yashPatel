@@ -209,3 +209,145 @@ body {
         font-size: 14px;
     }
 }
+
+/* ── Section Divider ──────────────────────────────────── */
+.section-divider {
+    display: flex;
+    align-items: center;
+    margin: 50px 0 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #dfc3a3, transparent);
+}
+
+.section-title-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #8b3a3a;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0 20px;
+    white-space: nowrap;
+}
+
+/* ── Education & Experience Cards ─────────────────────── */
+.edu-exp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.edu-exp-card {
+    display: flex;
+    gap: 22px;
+    background: #fdfaf7;
+    border: 1px solid #e8dfd8;
+    border-left: 4px solid #dfc3a3;
+    border-radius: 4px;
+    padding: 22px 24px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.edu-exp-card:hover {
+    box-shadow: 0 6px 20px rgba(139, 58, 58, 0.08);
+    transform: translateY(-2px);
+}
+
+.edu-exp-icon {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, #8b3a3a, #c4706f);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(139, 58, 58, 0.25);
+    margin-top: 4px;
+}
+
+.edu-exp-body {
+    flex: 1;
+}
+
+.edu-exp-degree {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #3a3a3a;
+    margin-bottom: 4px;
+}
+
+.edu-exp-institution {
+    font-family: 'Lora', serif;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #8b3a3a;
+    margin-bottom: 10px;
+}
+
+.edu-exp-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.edu-exp-badge {
+    background: #8b3a3a;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.exp-badge {
+    background: #5a7a8b;
+}
+
+.edu-exp-year {
+    font-size: 13px;
+    color: #888;
+    font-style: italic;
+    font-family: 'Lora', serif;
+}
+
+.edu-exp-desc {
+    font-size: 14.5px;
+    color: #5a5a5a;
+    line-height: 1.7;
+    font-family: 'Lora', serif;
+}
+
+/* Responsive – edu/exp */
+@media (max-width: 768px) {
+    .edu-exp-card {
+        flex-direction: column;
+        gap: 14px;
+        padding: 18px 16px;
+    }
+
+    .section-title-text {
+        font-size: 18px;
+    }
+
+    .edu-exp-degree {
+        font-size: 15px;
+    }
+}
